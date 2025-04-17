@@ -5,6 +5,7 @@ gem "foobara-local-files-crud-driver"
 gem "foobara-sh-cli-connector"
 
 group :development do
+  gem "foob"
   gem "foobara-rubocop-rules"
 
   gem "irb"
