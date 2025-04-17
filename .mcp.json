@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "capybaras-mcp-server": {
+      "type": "stdio",
+      "command": "./capybaras-mcp-server-remote",
+      "args": [],
+      "env": {}
+    }
+  }
+}

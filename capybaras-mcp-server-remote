@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require "foobara/mcp_connector"
+require "foobara/remote_imports"
+
+Foobara::RemoteImports::ImportCommand.run(manifest_url: "http://localhost:9292/manifest")
+
+connector = Foobara::McpConnector.new
+
+connector.connect(FindAllCapybaras)
+connector.connect(UpdateCapybara)
+
+connector.run_stdio_server

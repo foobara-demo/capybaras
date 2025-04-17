@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "foobara/mcp_connector"
+require_relative "capybaras"
+
+connector = Foobara::McpConnector.new
+
+connector.connect(FindAllCapybaras)
+connector.connect(UpdateCapybara)
+
+connector.run_stdio_server

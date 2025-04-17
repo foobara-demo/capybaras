@@ -29,7 +29,7 @@ GEM
       foobara-type-generator (~> 0.0.1)
       foobara-typescript-react-command-form-generator (~> 0.0.1)
       foobara-typescript-remote-command-generator (~> 0.0.1)
-    foobara (0.0.103)
+    foobara (0.0.104)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (~> 0.0.11)
@@ -52,22 +52,35 @@ GEM
       foobara-files-generator
     foobara-files-generator (0.0.5)
       foobara
+    foobara-http-command-connector (0.0.21)
+      foobara (~> 0.0.88)
+    foobara-json-schema-generator (0.0.4)
+      foobara (~> 0.0.92)
     foobara-local-files-crud-driver (0.0.9)
       foobara (~> 0.0.102)
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
     foobara-lru-cache (0.0.2)
+    foobara-mcp-connector (0.0.4)
+      foobara (~> 0.0.101)
+      foobara-json-schema-generator (~> 0.0.1)
     foobara-mcp-connector-generator (0.0.6)
       foobara (~> 0.0.99)
     foobara-organization-generator (0.0.2)
       foobara
       foobara-files-generator
+    foobara-rack-connector (0.0.9)
+      foobara (~> 0.0.88)
+      foobara-http-command-connector (~> 0.0.1)
+      rack
     foobara-rack-connector-generator (0.0.11)
       foobara
       foobara-files-generator
     foobara-redis-crud-driver-generator (0.0.4)
       foobara-files-generator (~> 0.0.1)
+    foobara-remote-imports (0.0.10)
+      foobara (~> 0.0.88)
     foobara-remote-imports-generator (0.0.3)
       foobara
       foobara-files-generator
@@ -102,6 +115,7 @@ GEM
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
     method_source (1.1.0)
+    nio4r (2.7.4)
     parallel (1.27.0)
     parser (3.3.8.0)
       ast (~> 2.4.1)
@@ -119,7 +133,12 @@ GEM
     psych (5.2.3)
       date
       stringio
+    puma (6.6.0)
+      nio4r (~> 2.0)
     racc (1.8.1)
+    rack (3.1.13)
+    rackup (2.2.1)
+      rack (>= 3)
     rainbow (3.1.1)
     rdoc (6.13.1)
       psych (>= 4.0.0)
@@ -143,7 +162,7 @@ GEM
     rubocop-rake (0.7.1)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1)
-    rubocop-rspec (3.5.0)
+    rubocop-rspec (3.6.0)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
     ruby-progressbar (1.13.0)
@@ -160,11 +179,17 @@ DEPENDENCIES
   foob
   foobara
   foobara-local-files-crud-driver
+  foobara-mcp-connector
+  foobara-rack-connector
+  foobara-remote-imports
   foobara-rubocop-rules
   foobara-sh-cli-connector
   irb
   pry
   pry-byebug
+  puma
+  rack
+  rackup
   rubocop
   rubocop-rake
 

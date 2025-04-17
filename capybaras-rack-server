@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "foobara/rack_connector"
+require_relative "capybaras"
+
+connector = Foobara::CommandConnectors::Http::Rack.new
+
+connector.connect(FindAllCapybaras)
+connector.connect(UpdateCapybara)
+
+connector.run_puma
