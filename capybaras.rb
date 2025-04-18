@@ -1,6 +1,7 @@
 require "foobara/local_files_crud_driver"
 
-Foobara::Persistence.default_crud_driver = Foobara::LocalFilesCrudDriver.new
+crud_driver = Foobara::LocalFilesCrudDriver.new(multi_process: true)
+Foobara::Persistence.default_crud_driver = crud_driver
 
 class Capybara < Foobara::Entity
   description "A gigantic semi-aquatic rodent!"
